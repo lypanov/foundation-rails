@@ -25,8 +25,8 @@ File.open(ASSET_PATH.join("stylesheets", "foundation", "index.css"), "w") do |fi
       file << "*= require 'foundation/#{filename.gsub('.css','')}'\n"
     end
     css_file = File.open(FOUNDATION_REPO_PATH.join("stylesheets", filename))
-    File.open(ASSET_PATH.join("stylesheets", "foundation", "#{filename}.scss"), "w") do |include_file|
-      include_file << css_file.read.gsub(/url\('?\.\.\/images\/([^\)']+)'?\)/, 'image-url("foundation/\1")')
+    File.open(ASSET_PATH.join("stylesheets", "foundation", "#{filename}.erb"), "w") do |include_file|
+      include_file << css_file.read.gsub(/url\('?\.\.\/images\/([^\)']+)'?\)/, 'url(<%= asset_path "foundation/\1" %>)')
       include_file << "\n\n"
     end
   end
