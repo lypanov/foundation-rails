@@ -1,3 +1,9 @@
+# FORK INFORMATION
+
+This fork changes the foundation-rails gem to use erb and asset_path rather than the compass fubarmagic which pretty much never works for me.
+
+The fork was inspired by https://github.com/asmega/foundation-rails/commit/c1d289edbd01b48398d0da83c5337aaf7571d10e.
+
 # WELCOME TO FOUNDATION
 
 Foundation is a rock-solid, responsive framework for rapidly prototyping and iterating into production code. It includes a 12-column, future-friendly grid and tons of great tools and elements that'll get you up and running in no time.
